@@ -1,0 +1,24 @@
+# this is close, need to fix so that payment increases by 10 until payment due goes below $0, then stops.
+payment = 10
+month = 1
+balance = 4773
+annualInterestRate = .2
+interest = (annualInterestRate / 12.0) * balance 
+payment = (balance / 12) 
+  
+for month in range(12):
+ 
+  if balance > 0:
+    interest = (annualInterestRate / 12.0) * balance 
+    
+    balance -= payment
+    balance += interest
+    month += 1
+    
+    
+    if balance <= 0:
+      print(payment)
+    elif month == 12 and balance > 0:
+      payment + 10
+      
+      
