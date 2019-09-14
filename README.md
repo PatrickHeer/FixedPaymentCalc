@@ -1,0 +1,2 @@
+# FixedPaymentCalc
+fixed payemnt calculator
